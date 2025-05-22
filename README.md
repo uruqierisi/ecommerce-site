@@ -27,29 +27,6 @@ localStorage	Persist cart and wishlist across sessions
 
 📱 Fully responsive (mobile-first)
 
-📂 Folder Structure
-
-/ecommerce/
-├── index.html
-├── products.html
-├── product.html
-├── cart.html
-├── wishlist.html
-├── checkout.html
-├── confirmation.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── app.js
-├── php/
-│   ├── products.php
-│   └── checkout.php
-└── images/
-    └── *.jpg (product images)
-📸 Screenshots
-Homepage
-Featured categories + smooth CTA
-
 Product Grid
 Filter + sort + price range slider
 
