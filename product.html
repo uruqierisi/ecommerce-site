@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - Product Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <nav class="bg-indigo-600 text-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">ShopEasy</a>
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="hover:text-indigo-200">Home</a>
+        <a href="products.html" class="hover:text-indigo-200">Products</a>
+        <a href="cart.html" class="hover:text-indigo-200 relative">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </a>
+        <a href="wishlist.html" class="hover:text-indigo-200">
+          <i class="fas fa-heart"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-12">
+    <a href="products.html" class="text-indigo-600 hover:underline mb-6 inline-block">
+      <i class="fas fa-arrow-left mr-1"></i> Back to Products
+    </a>
+
+    <div class="bg-white rounded-lg shadow-md overflow-hidden md:flex">
+      <!-- Product Image -->
+      <div class="md:w-1/2 p-6 flex items-center justify-center bg-gray-100">
+        <div id="product-detail-image" class="h-64 md:h-96 w-full flex items-center justify-center">
+          <!-- Product image will be inserted via JS -->
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="md:w-1/2 p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h1 id="product-detail-title" class="text-2xl font-bold">Product Title</h1>
+          <button id="product-detail-wishlist" class="text-gray-400 hover:text-red-500">
+            <i class="fas fa-heart text-xl"></i>
+          </button>
+        </div>
+
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400 mr-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="text-gray-600">(24 reviews)</span>
+        </div>
+
+        <p id="product-detail-price" class="text-2xl font-bold text-indigo-600 mb-4">$99.99</p>
+        <p id="product-detail-description" class="text-gray-600 mb-6">Product description goes here...</p>
+
+        <!-- Quantity Selector -->
+        <div class="mb-6">
+          <h3 class="font-semibold mb-2">Select Quantity:</h3>
+          <div class="flex items-center">
+            <button id="decrease-quantity" class="bg-gray-200 px-3 py-1 rounded-l-md">-</button>
+            <input type="number" id="product-quantity" value="1" min="1" class="w-16 text-center border-t border-b py-1" />
+            <button id="increase-quantity" class="bg-gray-200 px-3 py-1 rounded-r-md">+</button>
+          </div>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button id="add-to-cart-detail" class="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 transition mb-4">
+          Add to Cart
+        </button>
+
+        <!-- Extras -->
+        <div class="border-t pt-4 mt-4">
+          <div class="flex items-center text-gray-600 mb-2">
+            <i class="fas fa-truck mr-2"></i>
+            <span>Free shipping on orders over $50</span>
+          </div>
+          <div class="flex items-center text-gray-600">
+            <i class="fas fa-undo mr-2"></i>
+            <span>30-day return policy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="text-center text-gray-400">
+      &copy; 2025 ShopEasy. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

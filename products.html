@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEasy - Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <nav class="bg-indigo-600 text-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">ShopEasy</a>
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="hover:text-indigo-200">Home</a>
+        <a href="products.html" class="hover:text-indigo-200">Products</a>
+        <a href="cart.html" class="hover:text-indigo-200 relative">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </a>
+        <a href="wishlist.html" class="hover:text-indigo-200">
+          <i class="fas fa-heart"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Sidebar Filters -->
+      <aside class="w-full md:w-1/4 bg-white p-4 rounded-lg shadow-md h-fit">
+        <h3 class="text-xl font-semibold mb-4">Filters</h3>
+
+        <!-- Category Filter -->
+        <div class="mb-6">
+          <h4 class="font-medium mb-2">Categories</h4>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="category-filter mr-2" value="all" id="all" checked />
+              All Products
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="category-filter mr-2" value="electronics" id="electronics" />
+              Electronics
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="category-filter mr-2" value="clothing" id="clothing" />
+              Clothing
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="category-filter mr-2" value="home" id="home" />
+              Home & Living
+            </label>
+          </div>
+        </div>
+
+        <!-- Price Filter -->
+        <div class="mb-6">
+          <h4 class="font-medium mb-2">Price Range</h4>
+          <input type="range" min="0" max="1000" value="1000" class="w-full" id="price-range" />
+          <div class="flex justify-between mt-2">
+            <span>$0</span>
+            <span id="price-value">$1000</span>
+          </div>
+        </div>
+
+        <button id="apply-filters" class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition">
+          Apply Filters
+        </button>
+      </aside>
+
+      <!-- Product Grid -->
+      <section class="w-full md:w-3/4">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">All Products</h2>
+          <div class="flex items-center">
+            <label for="sort" class="mr-2">Sort by:</label>
+            <select id="sort" class="border rounded-md p-2">
+              <option value="default">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="products-grid">
+          <!-- Product cards will be injected here via JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="text-center text-gray-400">
+      &copy; 2025 ShopEasy. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEasy - Order Confirmation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <main class="container mx-auto px-4 py-12 text-center">
+    <div class="bg-white rounded-lg shadow-md p-8 max-w-md mx-auto">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-check text-2xl text-green-500"></i>
+      </div>
+      
+      <h1 class="text-2xl font-bold mb-4">Order Confirmed!</h1>
+      
+      <p class="text-gray-600 mb-6">
+        Thank you for your purchase. Your order has been received and is being processed.
+      </p>
+      
+      <div class="bg-gray-100 rounded-md p-4 mb-6">
+        <p class="font-semibold">Order #: <span id="order-number">12345</span></p>
+      </div>
+      
+      <p class="text-gray-600 mb-8">
+        A confirmation email has been sent to <span id="confirmation-email" class="font-semibold">your email</span>
+      </p>
+      
+      <a href="index.html" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition">
+        Continue Shopping
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="text-center text-gray-400">
+      &copy; 2025 ShopEasy. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
