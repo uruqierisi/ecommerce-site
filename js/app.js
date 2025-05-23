@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("price-value").textContent = `$${this.value}`;
     });
 
-  fetch("data/products.json")
+  fetch("php/products.php")
     .then((res) => res.json())
     .then((data) => {
       products = data;
